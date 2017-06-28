@@ -1,5 +1,5 @@
 # XProgressView
-![Demo](https://github.com/mzj21/xrecyclerview/blob/master/screenshots/sample1.gif?raw=true)
+![Demo](https://github.com/mzj21/xprogressview/blob/master/screenshots/sample1.gif?raw=true)
 
 ### 简介
 自定义进度条View。
