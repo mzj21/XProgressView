@@ -26,7 +26,14 @@ public class MainActivity extends ActivityBase {
         xpv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DownLoadSigTask().execute();
+                if (xpv.state == XProgressView.State.Start.ordinal()) {
+                    new DownLoadSigTask().execute();
+                    toast("Start");
+                } else if (xpv.state == XProgressView.State.Run.ordinal()) {
+                    toast("Run");
+                } else if (xpv.state == XProgressView.State.Complete.ordinal()) {
+                    toast("Complete");
+                }
             }
         });
         tv1.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +64,9 @@ public class MainActivity extends ActivityBase {
         @Override
         protected void onProgressUpdate(Integer... progress) {
             xpv.setupprogress(progress[0]);
+            if (progress[0] == 100) {
+                xpv.complete();
+            }
         }
     }
 }

@@ -21,3 +21,13 @@ dependencies {
 	    compile 'com.github.mzj21:XProgressView:1.0.0'
 }
 ```
+### 自定义属性
+```
+<declare-styleable name="XProgressView">
+    <attr name="xpv_color_background_ring" format="reference" />
+    <attr name="xpv_color_progress" format="reference" />
+    <attr name="xpv_color_complete" format="reference" />
+    <attr name="xpv_color_tick" format="reference" />
+    <attr name="xpv_color_error" format="reference" />
+</declare-styleable>
+```
