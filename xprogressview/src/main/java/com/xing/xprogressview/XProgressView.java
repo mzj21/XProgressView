@@ -75,7 +75,7 @@ public class XProgressView extends View {
         paint_full.setAntiAlias(true);
         paint_full.setStyle(Paint.Style.FILL);
         paint_full.setColor(color_complete);
-        paint_full.setShadowLayer(2, 3, 3, Color.rgb(180, 180, 180));
+
         paint_error = new Paint();
         paint_error.setAntiAlias(true);
         paint_error.setStyle(Paint.Style.FILL);
