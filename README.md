@@ -18,7 +18,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-	    compile 'com.github.mzj21:XProgressView:1.0.0'
+	    compile 'com.github.mzj21:XProgressView:1.0.1'
 }
 ```
 ### 自定义属性
