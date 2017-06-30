@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="XProgressView">
+        <!--圆环颜色-->
         <attr name="xpv_color_background_ring" format="reference" />
+        <!--进度条颜色-->
         <attr name="xpv_color_progress" format="reference" />
+        <!--完成颜色-->
         <attr name="xpv_color_complete" format="reference" />
+        <!--√颜色-->
         <attr name="xpv_color_tick" format="reference" />
+        <!--✖颜色-->
         <attr name="xpv_color_error" format="reference" />
+        <!--等待图片资源-->
+        <attr name="xpv_img_wait" format="reference" />
+        <!--开始图片资源-->
+        <attr name="xpv_img_play" format="reference" />
+        <!--停止图片资源-->
+        <attr name="xpv_img_stop" format="reference" />
+        <!--完成图片资源-->
+        <attr name="xpv_img_complete" format="reference" />
+        <!--等待图片资源与整体显示比例,建议0.4-->
+        <attr name="xpv_scale_wait" format="float" />
+        <!--开始图片资源与整体显示比例,建议1.0-->
+        <attr name="xpv_scale_play" format="float" />
+        <!--停止图片资源与整体显示比例,建议0.4-->
+        <attr name="xpv_scale_stop" format="float" />
+        <!--完成图片资源与整体显示比例,建议0.4-->
+        <attr name="xpv_scale_complete" format="float" />
     </declare-styleable>
 </resources>
