@@ -292,7 +292,14 @@ public class XProgressView extends View {
      * 重置
      */
     public void reset() {
-        state = State.Start.ordinal();
+        reset(State.Start.ordinal());
+    }
+
+    /**
+     * 重置
+     */
+    public void reset(int state) {
+        this.state = state;
         isWait = false;
     }
 
@@ -316,10 +323,17 @@ public class XProgressView extends View {
      * 等待
      */
     public void wait_start() {
+        wait_start(0);
+    }
+
+    /**
+     * 等待
+     */
+    public void wait_start(int wait_progress) {
         setupprogress(0);
         state = State.Wait.ordinal();
         isWait = true;
-        wait_progress = 0;
+        this.wait_progress = wait_progress;
         if (waitThread == null) {
             waitThread = new WaitThread();
             waitThread.start();
