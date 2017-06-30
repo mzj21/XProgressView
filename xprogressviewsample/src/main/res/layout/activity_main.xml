@@ -7,8 +7,8 @@
 
     <com.xing.xprogressview.XProgressView
         android:id="@+id/pv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
         android:layout_centerInParent="true"
         app:xpv_state="2"/>
 

@@ -25,7 +25,6 @@ public class XProgressView extends View {
     private Paint paint_transparent;//透明的Paint
 
     private RectF rect_wait;//等待的RectF
-    private RectF rect_background;//背景的RectF
     private RectF rect_progress;//进度条的RectF
 
     private float startAngle = -90;//开始的角度
@@ -68,7 +67,7 @@ public class XProgressView extends View {
     private float scale_comllete;
     private WaitThread waitThread;
     private boolean isWait = false;
-    private int wait_progress;
+    private int wait_progress = 270;
 
     public enum State {
         Start, Run, Complete, Error, Wait
@@ -135,7 +134,7 @@ public class XProgressView extends View {
 
         paint_wait = new Paint();
         paint_wait.setAntiAlias(true);
-        paint_wait.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint_wait.setStyle(Paint.Style.FILL);
         paint_wait.setColor(color_tick);
 
         paint_tick = new Paint();
@@ -179,7 +178,7 @@ public class XProgressView extends View {
         }
         size = Math.min(width, height);
 
-        strokewidth_background = size / 100;
+        strokewidth_background = size / 40;
         strokewidth_progress = strokewidth_background * 3;
         strokewidth_tick = strokewidth_background * 6;
         paint_background_ring.setStrokeWidth(strokewidth_background);
@@ -187,7 +186,6 @@ public class XProgressView extends View {
         paint_tick.setStrokeWidth(strokewidth_tick);
 
         rect_wait = new RectF(0, 0, size, size);
-        rect_background = new RectF(strokewidth_background, strokewidth_background, size - strokewidth_background, size - strokewidth_background);
         int w = strokewidth_background + strokewidth_progress / 2;
         rect_progress = new RectF(w, w, size - w, size - w);
 
@@ -258,7 +256,7 @@ public class XProgressView extends View {
         }
         if (state == State.Wait.ordinal()) {
             canvas.drawCircle(size / 2, size / 2, size / 2 - strokewidth_background, paint_background_ring);
-            canvas.drawArc(rect_wait, wait_progress % 360, 30, false, paint_wait);
+            canvas.drawArc(rect_wait, wait_progress % 360, 30, true, paint_wait);
             if (img_wait == 0) {
                 canvas.drawPath(path_play, paint_full);
             } else {
@@ -323,7 +321,7 @@ public class XProgressView extends View {
      * 等待
      */
     public void wait_start() {
-        wait_start(0);
+        wait_start(270);
     }
 
     /**
