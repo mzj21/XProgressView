@@ -106,6 +106,7 @@ public class XProgressView extends View {
         scale_play = ta.getFloat(R.styleable.XProgressView_xpv_scale_play, 0);
         scale_stop = ta.getFloat(R.styleable.XProgressView_xpv_scale_stop, 0);
         scale_comllete = ta.getFloat(R.styleable.XProgressView_xpv_scale_complete, 0);
+        state = ta.getInt(R.styleable.XProgressView_xpv_state, 0);
         init();
     }
 

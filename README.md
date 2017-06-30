@@ -54,5 +54,7 @@ dependencies {
         <attr name="xpv_scale_stop" format="float" />
         <!--完成图片资源与整体显示比例,建议0.4-->
         <attr name="xpv_scale_complete" format="float" />
+		<!--状态-->
+        <attr name="xpv_state" format="integer" />
     </declare-styleable>
 ```
