@@ -21,7 +21,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-	    compile 'com.github.mzj21:XProgressView:1.1.4'
+	    compile 'com.github.mzj21:XProgressView:1.1.5'
 }
 ```
 

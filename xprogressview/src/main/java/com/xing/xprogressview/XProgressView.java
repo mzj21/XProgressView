@@ -258,7 +258,7 @@ public class XProgressView extends View {
             canvas.drawCircle(size / 2, size / 2, size / 2 - strokewidth_background, paint_background_ring);
             canvas.drawArc(rect_wait, wait_progress % 360, 30, true, paint_wait);
             if (img_wait == 0) {
-                canvas.drawPath(path_play, paint_full);
+                canvas.drawPath(path_stop, paint_full);
             } else {
                 canvas.drawBitmap(bmp_wait, null, getRect(scale_wait), paint_full);
             }
