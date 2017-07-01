@@ -353,4 +353,10 @@ public class XProgressView extends View {
     private Rect getRect(float scale) {
         return new Rect((int) (size / 2 - size * scale / 2), (int) (size / 2 - size * scale / 2), (int) (size / 2 + size * scale / 2), (int) (size / 2 + size * scale / 2));
     }
+
+    public void setImg_complete(int resourceid){
+        img_complete = resourceid;
+        bmp_complete = BitmapFactory.decodeResource(getResources(), img_complete);
+        invalidate();
+    }
 }

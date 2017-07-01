@@ -10,7 +10,8 @@
         android:layout_width="@dimen/_50dp"
         android:layout_height="@dimen/_50dp"
         android:layout_centerInParent="true"
-        app:xpv_state="2"/>
+        app:xpv_scale_complete="1"
+        app:xpv_state="0"/>
 
     <TextView
         android:id="@+id/tv1"
