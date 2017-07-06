@@ -354,7 +354,25 @@ public class XProgressView extends View {
         return new Rect((int) (size / 2 - size * scale / 2), (int) (size / 2 - size * scale / 2), (int) (size / 2 + size * scale / 2), (int) (size / 2 + size * scale / 2));
     }
 
-    public void setImg_complete(int resourceid){
+    public void setImg_wait(int resourceid) {
+        img_wait = resourceid;
+        bmp_wait = BitmapFactory.decodeResource(getResources(), img_wait);
+        invalidate();
+    }
+
+    public void setImg_play(int resourceid) {
+        img_play = resourceid;
+        bmp_play = BitmapFactory.decodeResource(getResources(), img_play);
+        invalidate();
+    }
+
+    public void setImg_stop(int resourceid) {
+        img_stop = resourceid;
+        bmp_stop = BitmapFactory.decodeResource(getResources(), img_stop);
+        invalidate();
+    }
+
+    public void setImg_complete(int resourceid) {
         img_complete = resourceid;
         bmp_complete = BitmapFactory.decodeResource(getResources(), img_complete);
         invalidate();
